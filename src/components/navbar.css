@@ -1,0 +1,24 @@
+.navbar__container {
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  width: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(52, 52, 52, 0.45);
+  flex-direction: column;
+}
+.navbar__container > h1 {
+  margin-bottom: 50%;
+}
+
+.navbar__button {
+  padding: 10px 10px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  width: 60%;
+  margin: 5% 0px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+}
