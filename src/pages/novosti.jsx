@@ -2,7 +2,7 @@ import React from "react";
 import PageComponent from "../components/PageComponent";
 import smallBg from "../assets/crkva03.jpg";
 import bigBg from "../assets/novostibackground.jpg";
-import text from "../assets/text/novosti.docx";
+import text from "../assets/novosti.docx";
 export default function Novosti() {
   return (
     <>

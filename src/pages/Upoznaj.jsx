@@ -5,7 +5,7 @@ import img3 from "../assets/kud03.jpg";
 import img2 from "../assets/kud05.jpg";
 import img4 from "../assets/kud06.jpg";
 import bigBg from "../assets/uvodbackground.jpg";
-import glavniText from "../assets/text/upoznaj.docx";
+import glavniText from "../assets/upoznaj.docx";
 
 export default function Upoznaj() {
   return (

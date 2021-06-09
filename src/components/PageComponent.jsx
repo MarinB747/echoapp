@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./page.css";
 import ImageSlides from "react-imageslides";
-import FileViewer from "react-file-viewer";
+import FileViewer from "react-file-viewer-fix";
 
 export default function PageComponent(props) {
   const [foto, setFoto] = useState(false);
