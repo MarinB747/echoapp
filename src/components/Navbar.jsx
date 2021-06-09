@@ -9,8 +9,11 @@ export default function Navbar() {
   const goToNovosti = () => {
     histroy.push("/novosti");
   };
-  const goToUvod = () => {
-    histroy.push("/uvod");
+  const goToUpoznaj = () => {
+    histroy.push("/upoznaj");
+  };
+  const goToStart = () => {
+    histroy.push("/");
   };
   const goToKarta = () => {
     histroy.push("/karta");
@@ -27,7 +30,7 @@ export default function Navbar() {
         <div className="button__wrapper">
           <button
             className="navbar__button"
-            style={{ background: "#72B344" }}
+            style={{ background: "#FAEA8D" }}
             onClick={() => {
               goToNovosti();
               handleClick();
@@ -35,40 +38,28 @@ export default function Navbar() {
           >
             Novosti
           </button>
+
           <button
             className="navbar__button"
-            style={{ background: "#FAEA8D" }}
+            style={{ background: "#BD6E1A" }}
             onClick={() => {
-              goToUvod();
+              goToUpoznaj();
               handleClick();
             }}
           >
-            Uvod
-          </button>
-          <button className="navbar__button" style={{ background: "#BD6E1A" }}>
             Upoznaj
           </button>
           <button className="navbar__button" style={{ background: "#6C826A" }}>
             Otkrij
           </button>
-        </div>
-        <div className="button__wrapper">
+
           <button className="navbar__button" style={{ background: "#BD6E1A" }}>
             Doživi
           </button>
+
           <button
             className="navbar__button"
-            onClick={() => {
-              goToGalerija();
-              handleClick();
-            }}
             style={{ background: "#FAEA8D" }}
-          >
-            Foto
-          </button>
-          <button
-            className="navbar__button"
-            style={{ background: "#6C826A" }}
             onClick={() => {
               goToRazglednica();
               handleClick();
@@ -76,6 +67,28 @@ export default function Navbar() {
           >
             {" "}
             Razgledncia
+          </button>
+        </div>
+        <div className="button__wrapper">
+          <button
+            className="navbar__button"
+            style={{ background: "#72B344" }}
+            onClick={() => {
+              goToGalerija();
+              handleClick();
+            }}
+          >
+            Foto
+          </button>
+          <button
+            className="navbar__button--start"
+            style={{ background: "#6C826A" }}
+            onClick={() => {
+              goToStart();
+              handleClick();
+            }}
+          >
+            Start
           </button>
           <button
             className="navbar__button"

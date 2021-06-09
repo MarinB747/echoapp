@@ -12,14 +12,14 @@
 
 .txt__container {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 50%;
-  background: rgba(177, 247, 188, 0.623);
+  background: #fff;
   overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 4% 0%;
+  padding: 0 0;
   font-size: 1.2rem;
 }
 .big__bg {
@@ -116,11 +116,14 @@ h2 {
 .uvod__text {
   position: absolute;
   z-index: 5;
-  font-size: 2.5rem;
-  margin: 0 5%;
+  font-size: 1.5rem;
+  top: 50%;
   text-align: center;
+  width: 45%;
   font-family: "Times New Roman", Times, serif;
-  transition: all 2s ease-in;
+  border-style: solid;
+  border-radius: 20px;
+  background: #faea8d;
 }
 .foto__gallery--bg {
   background-color: black;
@@ -147,4 +150,51 @@ h2 {
   font-size: 1.8rem;
   border-radius: 50px;
   margin: 5% 0;
+}
+.img__grb--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  bottom: 20%;
+  right: 20%;
+}
+.img__grb {
+  height: 200px;
+  width: 200px;
+  will-change: transform;
+}
+.txt__running {
+  font-size: 1.5rem;
+  background: #faea8d;
+}
+.txt__running--wrapper1 {
+  width: 50%;
+  position: absolute;
+  z-index: 2;
+}
+.txt__running--wrapper2 {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+}
+.small__img {
+  position: absolute;
+  width: 60%;
+  z-index: 2;
+  top: 8%;
+  left: 5%;
+}
+.small__img--2 {
+  position: absolute;
+  width: 25%;
+  z-index: 2;
+  bottom: 23%;
+  left: 10%;
+}
+.text__area {
+  width: 100vh;
+  overflow: hidden;
 }

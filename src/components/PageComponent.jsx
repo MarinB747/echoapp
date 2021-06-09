@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./page.css";
 import ImageSlides from "react-imageslides";
+import FileViewer from "react-file-viewer";
+
 export default function PageComponent(props) {
   const [foto, setFoto] = useState(false);
   const images = [
@@ -43,12 +45,11 @@ export default function PageComponent(props) {
       </div>
       <div className="txt__container">
         <img className="big__bg" src={props.bigImg} alt="/" />
-        <h1>{props.naslov}</h1>
-        <h2>{props.podnaslov1}</h2>
-        <p>{props.paragraf1}</p>
-        <p>{props.paragraf2}</p>
-        <h2>{props.podnaslov2}</h2>
-        <p>{props.paragraf3}</p>
+        <FileViewer
+          className="text__area"
+          fileType={"docx"}
+          filePath={props.text}
+        />
       </div>
       <div className="img__container">
         {props.smallImg4 ? (
