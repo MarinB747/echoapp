@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./page.css";
 import ImageSlides from "react-imageslides";
-import FileViewer from "react-file-viewer-fix";
+import FileViewer from "react-file-viewer";
 
 export default function PageComponent(props) {
   const [foto, setFoto] = useState(false);
@@ -45,11 +45,13 @@ export default function PageComponent(props) {
       </div>
       <div className="txt__container">
         <img className="big__bg" src={props.bigImg} alt="/" />
-        <FileViewer
-          className="text__area"
-          fileType={"docx"}
-          filePath={props.text}
-        />
+        <iframe
+          src={props.text}
+          width="100%"
+          height="100%"
+          frameborder="0"
+          style={{ overflow: "hidden" }}
+        ></iframe>
       </div>
       <div className="img__container">
         {props.smallImg4 ? (
