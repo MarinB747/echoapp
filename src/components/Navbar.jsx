@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { useHistory } from "react-router-dom";
-export default function Navbar() {
+export default function Navbar(props) {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
@@ -49,9 +49,6 @@ export default function Navbar() {
           >
             Upoznaj
           </button>
-          <button className="navbar__button" style={{ background: "#6C826A" }}>
-            Otkrij
-          </button>
 
           <button className="navbar__button" style={{ background: "#BD6E1A" }}>
             Doživi
@@ -80,6 +77,9 @@ export default function Navbar() {
           >
             Foto
           </button>
+          <button className="navbar__button" style={{ background: "#6C826A" }}>
+            Otkrij
+          </button>
           <button
             className="navbar__button--start"
             style={{ background: "#6C826A" }}
@@ -89,6 +89,16 @@ export default function Navbar() {
             }}
           >
             Start
+          </button>
+          <button
+            className="navbar__button"
+            onClick={() => {
+              props.poruke();
+              handleClick();
+            }}
+            style={{ background: "#6C826A" }}
+          >
+            Poruke
           </button>
           <button
             className="navbar__button"

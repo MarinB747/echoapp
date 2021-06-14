@@ -2,12 +2,27 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  text-align: center;
+  overflow: hidden;
 }
 
 .img__container {
   display: flex;
-  width: 20.3vh;
+  width: 61vh;
   height: 25%;
+  overflow: scroll;
+}
+.img__container--small {
+  display: flex;
+  width: 20.3vh;
+  height: 100%;
+  overflow: scroll;
+}
+.img__container--small::-webkit-scrollbar {
+  display: none;
+}
+.img__container::-webkit-scrollbar {
+  display: none;
 }
 
 .txt__container {
@@ -16,7 +31,6 @@
   height: 50%;
   background: #fff;
   overflow: scroll;
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 0;
@@ -46,12 +60,13 @@ h2 {
   font-size: 1.2rem;
 }
 .img__cover {
-  width: 100%;
-  min-height: 5%;
+  width: fit-content;
+  height: fit-content;
   transition: all 1s ease-out;
 }
 .img__cover--bottom {
-  width: 300%;
+  width: 100vw;
+  height: fit-content;
   transition: all 1s ease-out;
 }
 .img__cover--fs {
@@ -126,7 +141,6 @@ h2 {
   background: #faea8d;
 }
 .foto__gallery--bg {
-  background-color: black;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -166,19 +180,24 @@ h2 {
   will-change: transform;
 }
 .txt__running {
-  font-size: 1.5rem;
   background: #faea8d;
+  height: 70px;
+  font-size: 3rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .txt__running--wrapper1 {
-  width: 50%;
+  width: 40%;
   position: absolute;
   z-index: 2;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .txt__running--wrapper2 {
-  width: 100%;
+  width: 105%;
   position: absolute;
   z-index: 2;
-  top: 35%;
+  bottom: 12%;
 }
 .small__img {
   position: absolute;
@@ -197,4 +216,137 @@ h2 {
 .text__area {
   width: 100vh;
   overflow: hidden;
+}
+
+.img__container--upoznaj {
+  display: flex;
+  width: auto;
+  height: 40%;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+.img__cover--upoznaj {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.txt__container__upoznaj {
+  width: 100vw;
+  height: 40%;
+  background: hsla(51, 92%, 77%, 0.808);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0;
+  font-size: 1.2rem;
+
+  overflow: hidden;
+  align-items: center;
+}
+.txt__container__upoznaj::-webkit-scrollbar {
+  display: none;
+}
+.content__container::-webkit-scrollbar {
+  display: none;
+}
+
+.upoznaj__btn--left {
+  position: absolute;
+  bottom: 10%;
+  left: 2%;
+  margin-right: 10px;
+  width: 100px;
+  height: 200px;
+  border-style: solid;
+  border-width: 100px 100px 100px 0;
+  background-color: transparent;
+  border-color: transparent #007bff79 transparent transparent;
+  z-index: 3;
+}
+.upoznaj__btn--right {
+  position: absolute;
+  bottom: 10%;
+  right: 2%;
+  margin-left: 10px;
+  width: 100px;
+  height: 200px;
+  border-style: solid;
+  border-width: 100px 0 100px 100px;
+  border-color: transparent transparent transparent #b96000bb;
+  background-color: transparent;
+  z-index: 3;
+}
+.upoznaj__header {
+  background: rgba(255, 255, 255, 0.719);
+  height: 8%;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  margin-top: 15%;
+  overflow: hidden;
+  padding-top: 20px;
+}
+.content__container {
+  min-height: 75%;
+  overflow: hidden;
+}
+.upoznaj__txt {
+  width: 60vw;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.719);
+  display: flex;
+  padding: 0 0;
+  font-size: 1.2rem;
+
+  border-style: solid;
+  overflow: hidden;
+}
+.upoznaj__img__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upoznaj__content {
+  min-height: 59%;
+  overflow: hidden;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.719),
+    rgba(250, 234, 142, 0.808)
+  );
+}
+.upoznaj__img {
+  display: flex;
+  width: 200px;
+  height: 150px;
+
+  border-style: solid;
+}
+.galerija__container {
+  display: flex;
+  flex-direction: column;
+  width: 1080px;
+  height: 1045px;
+  overflow: scroll;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.719),
+    rgba(250, 234, 142, 0.808)
+  );
+}
+.galerija__container::-webkit-scrollbar {
+  display: none;
+}
+.galerija__img {
+  min-width: 1080px;
+  min-height: 1137px;
+}
+.footer__container {
+  background: linear-gradient(
+    rgba(250, 234, 142, 0.808),
+    rgba(151, 141, 86, 0.808) 90%
+  );
+  height: 5%;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  width: 100 vw;
+  overflow: hidden;
+  padding-top: 20px;
 }
